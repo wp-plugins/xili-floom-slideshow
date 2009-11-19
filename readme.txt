@@ -15,7 +15,7 @@ xili-floom-slideshow integrates the floom slideshow in wordpress theme.
 Floom slideshow designed by [Oskar Krawczyk](http://nouincolor.com/) under MIT license is wonderful and amazing. For integration inside wordpress, it can be awesome ! xili-floom-slideshow tries to install it automatically but also allows personalizations.
 = How it works ? =
 **xili-floom-slideshow** inserts the javascript and css file inside the header of the theme. The images attached (but not inserted) to a post (or a page) are listed for the slideshow. And after adding a `[xilifloom]` shortcode inside the content of the post, the slideshow of the images are automatically displayed.
-With the dashboard Settings page, it is possible to change some properties of the slideshow without changing the original javascript: *by example, number of vertical 'venitian' blinds, speed, progress bar, visible captions, and more.*
+With the dashboard Settings page, it is possible to change some properties of the slideshow without changing the original javascript: *by example, number of vertical 'venitian' blinds, speed, progress bar, visible captions, and [more](http://blog.olicio.us/2009/07/25/floom/).*
 Some properties can be attached to one post by using custom fields.
 
 **prerequisite**
