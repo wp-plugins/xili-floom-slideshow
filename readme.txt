@@ -10,7 +10,7 @@ xili-floom-slideshow integrates the floom slideshow in wordpress theme.
 
 == Description ==
 
-*xili-floom-slideshow integrate the Floom slideshow in wordpress theme.*
+*xili-floom-slideshow integrates the Floom slideshow in wordpress theme.*
 
 Floom slideshow designed by [Oskar Krawczyk](http://nouincolor.com/) under MIT license is wonderful and amazing. For integration inside wordpress, it can be awesome ! xili-floom-slideshow tries to install it automatically but also allows personalizations.
 = How it works ? =
