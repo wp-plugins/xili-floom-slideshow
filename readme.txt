@@ -1,10 +1,10 @@
 === xili floom slideshow ===
 Contributors: MS xiligroup
 Donate link: http://dev.xiligroup.com/xili-floom-slideshow/
-Tags: theme, floom, Post, plugin, posts, mootools, slideshow, shortcode, javascript, css
+Tags: theme, floom, Post, plugin, posts, mootools, slideshow, shortcode, javascript, css, iPhone
 Requires at least: 2.8.0
 Tested up to: 2.9
-Stable tag: 0.9.0
+Stable tag: 0.9.1
 
 xili-floom-slideshow integrates the floom slideshow in wordpress theme.
 
@@ -32,15 +32,33 @@ Some properties can be attached to one post by using custom fields.
 
 = Personalizations =
 
-Some **Custom fieds** are possible: `floom_divs` to set id of the div containing images ; `floom_captions` (true or false) to display or not the caption (title) of the images ; `floom_progressbar`  (true or false) to show (or not) the progress bar.
+Some **Custom fieds** are possible: `floom_divs` to set id of the div containing images ; `floom_captions` (true or false) to display or not the caption (title) of the images ; `floom_progressbar`  (true or false) to show (or not) the progress bar. `floom_title_desc` is set by default to 1 and display the title of the attached images. (2 : only the description and 3 : both title and description).
 
-More infos soon...
+* `floom_parentID` to choose attachment from another post (and not the current post where slideshow in inserted)
+* `floom_subname` to sub-select a series of pictures attached by set a mask. [See post](http://dev.xiligroup.com/?p=1269).
+
+The following custom fields (prefix floom_) work like javascript parameters. Use them with prudence..
+
+* `floom_amount` (number of blinds)
+* `floom_interval` (interval between change)
+* `floom_axis` (by default : vertical)
+
+It is also possible to fireEvent (onSlideChange and onPreload) by choosing name of fired functions (javascript added by functions in current theme).
+
+= xilitheme-select plugin compatibility (for iPhone) =
+As in website [dev.xiligroup.com](http://dev.xiligroup.com/), it is now possible to specify a floom.css in each theme (the for desktop, the for mobile as iPhone or iPod).
+
+More detailled infos soon...
 
 == Frequently Asked Questions ==
 
-= Is is possible to insert slideshow outside the content of post on CMS ? =
+= Is it possible to insert slideshow outside the content of post on CMS ? =
 
 Yes, xili-floom-slideshow only need to find the id of the div where images are displayed (default name **blinds**).
+
+= What happen when iPhone or iPod visit the website ?
+As you know, flash is not compatible with iPhone, but javascript and Floom is !
+If xilitheme-select plugin is activated, the theme for iPhone is selected and the floom.css inside this theme is choosen. [see snapshot](http://wordpress.org/extend/plugins/xili-floom-slideshow/screenshots/).
 
 = Is xili-floom-slideshow plugin compatible with other plugins based on Mootools ? = 
 
@@ -48,18 +66,25 @@ Yes, but be aware to add a special function in you functions.php. See example [h
 
 = Support Forum or contact form ? =
 
-Effectively, prefer [forum](http://forum.dev.xiligroup.com/) to obtain some support.
+Effectively, prefer [forum](http://forum.dev.xiligroup.com/) to have support (with delay around one or two days - here European Time).
 
 == Screenshots ==
 
 1. Settings page.
 2. Folder example in current theme.
 3. Blinds during transition between two images (snapshot from Oskar example).
+4. Example in iPhone Safari.
 
 == Changelog ==
+
+= 0.9.1 =
+
+* xilitheme-select plugin compatibility (for iPhone), 
+* add options to fireEvents, 
+* fixes,...
 
 = 0.9.0 =
 
 * first public release
 
-© 2009-11-19 MS dev.xiligroup.com
+© 2009-11-21 MS dev.xiligroup.com
