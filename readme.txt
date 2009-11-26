@@ -1,10 +1,10 @@
 === xili floom slideshow ===
 Contributors: MS xiligroup
 Donate link: http://dev.xiligroup.com/xili-floom-slideshow/
-Tags: theme, floom, Post, plugin, posts, mootools, slideshow, shortcode, javascript, css, iPhone
+Tags: theme, floom, Post, plugin, posts, mootools, slideshow, shortcode, javascript, css, iPhone, gallery
 Requires at least: 2.8.0
 Tested up to: 2.9
-Stable tag: 0.9.1
+Stable tag: 0.9.2
 
 xili-floom-slideshow integrates the floom slideshow in wordpress theme.
 
@@ -14,11 +14,17 @@ xili-floom-slideshow integrates the floom slideshow in wordpress theme.
 
 Floom slideshow designed by [Oskar Krawczyk](http://nouincolor.com/) under MIT license is wonderful and amazing. For integration inside wordpress, it can be awesome ! xili-floom-slideshow tries to install it automatically but also allows personalizations.
 = How it works ? =
-**xili-floom-slideshow** inserts the javascript and css file inside the header of the theme. The images attached (but not inserted) to a post (or a page) are listed for the slideshow. And after adding a `[xilifloom]` shortcode inside the content of the post, the slideshow of the images are automatically displayed.
+**xili-floom-slideshow** inserts the javascript and css file inside the header of the theme. The images attached (but not inserted) to a post (or a page) are listed for the slideshow. And after adding a `[xilifloom]` shortcode inside the content of the post, the slideshow of the images of the gallery are automatically displayed.
 With the dashboard Settings page, it is possible to change some properties of the slideshow without changing the original javascript: *by example, number of vertical 'venitian' blinds, speed, progress bar, visible captions, and [more](http://blog.olicio.us/2009/07/25/floom/).*
 Some properties can be attached to one post by using custom fields.
 
-**prerequisite**
+= new 0.9.2 =
+
+* add for pictures order by menu_order. If order is set in gallery linked to a post, displayed series is ordered by these numbers ascendant.
+* more parameters.
+* add hooks and filters : to allow better selection of floom values and choice of series of images (not necessary attached to a post) according the theme or cms architecture, two filters was added : `xili_floom_get_values` and `xili_floom_get_images` insertable in functions inside `functions.php` of the current theme. Very useful to personalize header according place inside the site architecture. [example](http://dev.xiligroup.com/?cat=480&lang=en_us) 
+
+= prerequisite =
 
 * Minimun knowledges in Wordpress architecture (and css).
 * If others plugins use mootools, some modifications must be done through a added function named `xilifloom_theme_header()` inside functions.php. 
@@ -36,6 +42,8 @@ Some **Custom fieds** are possible: `floom_divs` to set id of the div containing
 
 * `floom_parentID` to choose attachment from another post (and not the current post where slideshow in inserted)
 * `floom_subname` to sub-select a series of pictures attached by set a mask. [See post](http://dev.xiligroup.com/?p=1269).
+* `floom_container` to inform name of container (default : blinds-cont).
+* `floom_display` to decide if the container is displayed when no image (block or none) - default : block.
 
 The following custom fields (prefix floom_) work like javascript parameters. Use them with prudence..
 
@@ -74,8 +82,16 @@ Effectively, prefer [forum](http://forum.dev.xiligroup.com/) to have support (wi
 2. Folder example in current theme.
 3. Blinds during transition between two images (snapshot from Oskar example).
 4. Example in iPhone Safari.
+5. Ordered list of images.
 
 == Changelog ==
+
+= 0.9.2 =
+
+* add for pictures orderby menu_order 
+* add hooks and filter
+* add container and display params
+* fixes (quoted captions)
 
 = 0.9.1 =
 
@@ -87,4 +103,4 @@ Effectively, prefer [forum](http://forum.dev.xiligroup.com/) to have support (wi
 
 * first public release
 
-© 2009-11-21 MS dev.xiligroup.com
+© 2009-11-25 MS dev.xiligroup.com
