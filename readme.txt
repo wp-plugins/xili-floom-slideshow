@@ -1,10 +1,10 @@
 === xili floom slideshow ===
 Contributors: MS xiligroup
 Donate link: http://dev.xiligroup.com/xili-floom-slideshow/
-Tags: theme, floom, Post, plugin, posts, mootools, slideshow, shortcode, javascript, css, iPhone, gallery
+Tags: theme, floom, Post, plugin, posts, mootools, slideshow, shortcode, javascript, extended class, css, iPhone, iPod, gallery
 Requires at least: 2.8.0
 Tested up to: 2.9
-Stable tag: 0.9.2
+Stable tag: 0.9.3
 
 xili-floom-slideshow integrates the floom slideshow in wordpress theme.
 
@@ -18,7 +18,11 @@ Floom slideshow designed by [Oskar Krawczyk](http://nouincolor.com/) under MIT l
 With the dashboard Settings page, it is possible to change some properties of the slideshow without changing the original javascript: *by example, number of vertical 'venitian' blinds, speed, progress bar, visible captions, and [more](http://blog.olicio.us/2009/07/25/floom/).*
 Some properties can be attached to one post by using custom fields.
 
-= new 0.9.2 =
+= new 0.9.3 =
+Gold parameters added : ready to integrate a new child class of Floom [see this post](http://dev.xiligroup.com/?p=1357). Open to better events exchanged with theme UI. More modularity and possibility of setting. (*Gold options are reserved for theme designer and webmaster with sufficient knowledge in php, js,...*)
+CAUTION: after upgrading, if `floom_subname` is used in custom fields of some posts, to retrieve the images series, the wildcard must be wrapped with one or two chars '%' as in **LIKE** of sql query.
+
+= 0.9.2 =
 
 * add for pictures order by menu_order. If order is set in gallery linked to a post, displayed series is ordered by these numbers ascendant.
 * more parameters.
@@ -38,14 +42,14 @@ Some properties can be attached to one post by using custom fields.
 
 = Personalizations =
 
-Some **Custom fieds** are possible: `floom_divs` to set id of the div containing images ; `floom_captions` (true or false) to display or not the caption (title) of the images ; `floom_progressbar`  (true or false) to show (or not) the progress bar. `floom_title_desc` is set by default to 1 and display the title of the attached images. (2 : only the description and 3 : both title and description).
+Some **Custom fields** are possible: `floom_divs` to set id of the div containing images ; `floom_captions` (true or false) to display or not the caption (title) of the images ; `floom_progressbar`  (true or false) to show (or not) the progress bar. `floom_title_desc` is set by default to 1 and display the title of the attached images. (2 : only the description and 3 : both title and description).
 
 * `floom_parentID` to choose attachment from another post (and not the current post where slideshow in inserted)
-* `floom_subname` to sub-select a series of pictures attached by set a mask. [See post](http://dev.xiligroup.com/?p=1269).
+* `floom_subname` to sub-select a series of pictures attached by set a mask (use % as LIKE in SQL %img or %pict%...) [See post](http://dev.xiligroup.com/?p=1269).
 * `floom_container` to inform name of container (default : blinds-cont).
 * `floom_display` to decide if the container is displayed when no image (block or none) - default : block.
 
-The following custom fields (prefix floom_) work like javascript parameters. Use them with prudence..
+The following custom fields (prefix floom_) work like javascript parameters. Use them with caution..
 
 * `floom_amount` (number of blinds)
 * `floom_interval` (interval between change)
@@ -53,8 +57,11 @@ The following custom fields (prefix floom_) work like javascript parameters. Use
 
 It is also possible to fireEvent (onSlideChange and onPreload) by choosing name of fired functions (javascript added by functions in current theme).
 
+**Gold parameters**
+If active in plugin settings, a wide range of features are open for special js effects on first or last slide and on other events of the child class... [see this post](http://dev.xiligroup.com/?p=1357)
+
 = xilitheme-select plugin compatibility (for iPhone) =
-As in website [dev.xiligroup.com](http://dev.xiligroup.com/), it is now possible to specify a floom.css in each theme (the for desktop, the for mobile as iPhone or iPod).
+As in this website [dev.xiligroup.com](http://dev.xiligroup.com/), it is now possible to specify a floom.css in each theme (the for desktop, the for mobile as iPhone or iPod).
 
 More detailled infos soon...
 
@@ -82,9 +89,15 @@ Effectively, prefer [forum](http://forum.dev.xiligroup.com/) to have support (wi
 2. Folder example in current theme.
 3. Blinds during transition between two images (snapshot from Oskar example).
 4. Example in iPhone Safari.
-5. Ordered list of images.
+5. Ordered list of images (only these in slideshow are affected).
 
 == Changelog ==
+
+= 0.9.3 =
+
+* update query with subname as LIKE in sql (need now % char in custom fields).
+* add Gold functions and ability to use child class of floom.
+* some fixes
 
 = 0.9.2 =
 
@@ -103,4 +116,4 @@ Effectively, prefer [forum](http://forum.dev.xiligroup.com/) to have support (wi
 
 * first public release
 
-© 2009-11-25 MS dev.xiligroup.com
+© 2009-12-04 MS dev.xiligroup.com
