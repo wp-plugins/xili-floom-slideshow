@@ -84,7 +84,7 @@ Yes, but be aware to add a special function in you functions.php. See example [h
 
 = Support Forum or contact form ? =
 
-Effectively, prefer [forum](http://forum.dev.xiligroup.com/) to have support (with delay around one or two days - here European Time).
+Effectively, prefer [forum](http://forum2.dev.xiligroup.com/) to have support (with delay around one or two days - here European Time).
 
 == Screenshots ==
 
