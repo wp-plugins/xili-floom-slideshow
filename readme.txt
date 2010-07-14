@@ -117,4 +117,11 @@ Effectively, prefer [forum](http://forum.dev.xiligroup.com/) to have support (wi
 
 * first public release
 
+== Upgrade Notice ==
+
+As usually, don't forget to backup the database before major upgrade or testing no-current version.
+Upgrading can be easily procedeed through WP admin UI or through ftp.
+
+== More Infos ==
+
 © 2010-07-14 MS dev.xiligroup.com
