@@ -3,7 +3,7 @@ Contributors: MS xiligroup
 Donate link: http://dev.xiligroup.com/xili-floom-slideshow/
 Tags: theme, floom, Post, plugin, posts, mootools, slideshow, shortcode, javascript, extended class, css, iPhone, iPod, gallery
 Requires at least: 2.8.0
-Tested up to: 2.9
+Tested up to: 3.0
 Stable tag: 0.9.3
 
 xili-floom-slideshow integrates the floom slideshow in wordpress theme.
@@ -116,4 +116,4 @@ Effectively, prefer [forum](http://forum.dev.xiligroup.com/) to have support (wi
 
 * first public release
 
-© 2009-12-04 MS dev.xiligroup.com
+© 2010-07-14 MS dev.xiligroup.com
