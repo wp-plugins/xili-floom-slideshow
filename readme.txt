@@ -19,8 +19,10 @@ With the dashboard Settings page, it is possible to change some properties of th
 Some properties can be attached to one post by using custom fields.
 
 = 0.9.3 =
-**Tested with WordPress 3.0 both on monosite as [here](http://dev.xiligroup.com/) and multisite as [there](http://lookandfeel.wpmu.xilione.com/2010/07/14/xili-floom-slideshow-and-wordpress-3-0/) **
+**Tested with WordPress 3.0 both on monosite as** [here](http://dev.xiligroup.com/) and multisite as [there](http://lookandfeel.wpmu.xilione.com/2010/07/14/xili-floom-slideshow-and-wordpress-3-0/)
+ 
 Gold parameters added : ready to integrate a new child class of Floom [see this post](http://dev.xiligroup.com/?p=1357). Open to better events exchanged with theme UI. More modularity and possibility of setting. (*Gold options are reserved for theme designer and webmaster with sufficient knowledge in php, js,...*)
+
 CAUTION: after upgrading, if `floom_subname` is used in custom fields of some posts, to retrieve the images series, the wildcard must be wrapped with one or two chars '%' as in **LIKE** of sql query.
 
 = 0.9.2 =
