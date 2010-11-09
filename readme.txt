@@ -1,12 +1,13 @@
 === xili floom slideshow ===
 Contributors: MS xiligroup
 Donate link: http://dev.xiligroup.com/xili-floom-slideshow/
-Tags: theme, floom, Post, plugin, posts, mootools, slideshow, shortcode, javascript, extended class, css, iPhone, iPod, gallery
-Requires at least: 2.8.0
-Tested up to: 2.9
-Stable tag: 0.9.3
+Tags: theme, floom, Post, plugin, posts, mootools, slideshow, shortcode, javascript, extended class, css, iPhone, iPod, iPad, gallery, child theme
+Requires at least: 2.9.0
+Tested up to: 3.0
+Stable tag: 0.9.5
+License: GPLv2
 
-xili-floom-slideshow integrates the floom slideshow in wordpress theme.
+xili-floom-slideshow integrates the floom slideshow in WordPress theme or child theme.
 
 == Description ==
 
@@ -18,9 +19,14 @@ Floom slideshow designed by [Oskar Krawczyk](http://nouincolor.com/) under MIT l
 With the dashboard Settings page, it is possible to change some properties of the slideshow without changing the original javascript: *by example, number of vertical 'venitian' blinds, speed, progress bar, visible captions, and [more](http://blog.olicio.us/2009/07/25/floom/).*
 Some properties can be attached to one post by using custom fields.
 
-= new 0.9.3 =
-Gold parameters added : ready to integrate a new child class of Floom [see this post](http://dev.xiligroup.com/?p=1357). Open to better events exchanged with theme UI. More modularity and possibility of setting. (*Gold options are reserved for theme designer and webmaster with sufficient knowledge in php, js,...*)
-CAUTION: after upgrading, if `floom_subname` is used in custom fields of some posts, to retrieve the images series, the wildcard must be wrapped with one or two chars '%' as in **LIKE** of sql query.
+= new 0.9.5 =
+
+* compatibility with child theme as visible in new theme of [dev.xiligroup.com](http://dev.xiligroup.com/) - child example of default twentyten -
+* add thumbnail bar with shortcode [xilifloombar]
+
+= 0.9.3 =
+* Gold parameters added : ready to integrate a new child class of Floom [see this post](http://dev.xiligroup.com/?p=1357). Open to better events exchanged with theme UI. More modularity and possibility of setting. (*Gold options are reserved for theme designer and webmaster with sufficient knowledge in php, js,...*)
+* CAUTION: after upgrading, if `floom_subname` is used in custom fields of some posts, to retrieve the images series, the wildcard must be wrapped with one or two chars '%' as in **LIKE** of sql query.
 
 = 0.9.2 =
 
@@ -77,11 +83,16 @@ If xilitheme-select plugin is activated, the theme for iPhone is selected and th
 
 = Is xili-floom-slideshow plugin compatible with other plugins based on Mootools ? = 
 
-Yes, but be aware to add a special function in you functions.php. See example [here](http://dev.xiligroup.com/).
+Yes, but be aware to add a special function in your functions.php. See example [here](http://dev.xiligroup.com/xili-floom-slideshow/).
+
+= Is is possible to display progressive texts ?
+
+Yes, by creating a line by line image series like [here](http://www.presse-infosplus.fr/).
+
 
 = Support Forum or contact form ? =
 
-Effectively, prefer [forum](http://forum.dev.xiligroup.com/) to have support (with delay around one or two days - here European Time).
+Effectively, prefer [forum](http://forum2.dev.xiligroup.com/) to have support (with delay around one or two days - here European Time).
 
 == Screenshots ==
 
@@ -93,6 +104,10 @@ Effectively, prefer [forum](http://forum.dev.xiligroup.com/) to have support (wi
 
 == Changelog ==
 
+= 0.9.5 = 
+* integrate child theme better
+= 0.9.4 = 
+* add thumbnail bar with Shortcode [xilifloombar]
 = 0.9.3 =
 
 * update query with subname as LIKE in sql (need now % char in custom fields).
@@ -116,4 +131,12 @@ Effectively, prefer [forum](http://forum.dev.xiligroup.com/) to have support (wi
 
 * first public release
 
-© 2009-12-04 MS dev.xiligroup.com
+© 2010-11-09 MS dev.xiligroup.com
+
+== Upgrade Notice ==
+
+* Plugin only use Options table in WP database.
+* As usual before upgrading, read carefully the readme.txt and backup your database.
+* Read code source if you use elsewhere mootools library.
+
+
