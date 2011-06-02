@@ -2,9 +2,9 @@
 Contributors: MS xiligroup
 Donate link: http://dev.xiligroup.com/xili-floom-slideshow/
 Tags: theme, floom, Post, plugin, posts, mootools, slideshow, shortcode, javascript, extended class, css, iPhone, iPod, iPad, gallery, child theme
-Requires at least: 2.9.0
-Tested up to: 3.0
-Stable tag: 0.9.5
+Requires at least: 3.0
+Tested up to: 3.1
+Stable tag: 0.9.7
 License: GPLv2
 
 xili-floom-slideshow integrates the floom slideshow in WordPress theme or child theme.
@@ -19,7 +19,13 @@ Floom slideshow designed by [Oskar Krawczyk](http://nouincolor.com/) under MIT l
 With the dashboard Settings page, it is possible to change some properties of the slideshow without changing the original javascript: *by example, number of vertical 'venitian' blinds, speed, progress bar, visible captions, and [more](http://blog.olicio.us/2009/07/25/floom/).*
 Some properties can be attached to one post by using custom fields.
 
-= new 0.9.5 =
+
+= new 0.9.7 =
+* OOP new source code
+* new *like* function because changes in WP 3.0 when naming file and slug of attachment images. Possible to choose post column (`post_name or guid or…`) to sub-select with `floom_subname` postmeta
+* developers using global `$xilifloom_name_selector` must change to function `set_xilifloom_name_selector()` - see code at end of source
+
+= 0.9.5 =
 
 * compatibility with child theme as visible in new theme of [dev.xiligroup.com](http://dev.xiligroup.com/) - child example of default twentyten -
 * add thumbnail bar with shortcode [xilifloombar]
@@ -69,7 +75,7 @@ If active in plugin settings, a wide range of features are open for special js e
 = xilitheme-select plugin compatibility (for iPhone) =
 As in this website [dev.xiligroup.com](http://dev.xiligroup.com/), it is now possible to specify a floom.css in each theme (the for desktop, the for mobile as iPhone or iPod).
 
-More detailled infos soon...
+
 
 == Frequently Asked Questions ==
 
@@ -104,6 +110,11 @@ Effectively, prefer [forum](http://forum2.dev.xiligroup.com/) to have support (w
 
 == Changelog ==
 
+= 0.9.6, 0.9.7 = 
+* OOP source code
+* new *like* function because changes in WP 3.0 when naming file and slug of attachment images. Possible to choose post column (`post_name or guid or…`) to sub-select by `floom_subname`
+* developers using global `$xilifloom_name_selector` must change to function `set_xilifloom_name_selector()` - see code at end of source
+
 = 0.9.5 = 
 * integrate child theme better
 = 0.9.4 = 
@@ -131,11 +142,12 @@ Effectively, prefer [forum](http://forum2.dev.xiligroup.com/) to have support (w
 
 * first public release
 
-© 2010-11-09 MS dev.xiligroup.com
+© 2011-06-02 MS dev.xiligroup.com
 
 == Upgrade Notice ==
 
 * Plugin only use Options table in WP database.
+* if update via desktop ftp : erase previous version folder before uploading latest version.
 * As usual before upgrading, read carefully the readme.txt and backup your database.
 * Read code source if you use elsewhere mootools library.
 
