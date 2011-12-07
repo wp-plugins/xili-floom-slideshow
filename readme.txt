@@ -100,7 +100,7 @@ For the settings, if not in shortcode, try to find in postmeta of displayed post
 * Another important thing is to prepare the style.css of the theme or the floom.css  in subfolder floom/css inserted in the theme. (don't modify the css in plugin, use it as example.
 
 
-= What happen when iPhone or iPod visit the website ?
+= What happen when iPhone or iPod visit the website ? =
 As you know, flash is not compatible with iPhone, but javascript and Floom is !
 If xilitheme-select plugin is activated, the theme for iPhone is selected and the floom.css inside this theme is choosen. [see snapshot](http://wordpress.org/extend/plugins/xili-floom-slideshow/screenshots/).
 
@@ -116,7 +116,7 @@ Yes, by creating a line by line image series like [here](http://www.presse-infos
 
 Yes, but don't forget that the theme css must contains all div styles for each slideshow (with unique id).
 
-= What happens with default divs (frame and blinds) when more than one ?
+= What happens with default divs (frame and blinds) when more than one ? =
 
 xili-floom-slideshow plugin creates unique ids based on the default one : blinds-cont, blinds-cont-2,… and blinds, blinds-2,… (to be also compatible with previous versions).
 
