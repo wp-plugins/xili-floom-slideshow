@@ -1,10 +1,10 @@
 === xili floom slideshow ===
-Contributors: MS xiligroup
+Contributors: michelwppi, MS xiligroup
 Donate link: http://dev.xiligroup.com/xili-floom-slideshow/
 Tags: theme, floom, Post, plugin, posts, mootools, slideshow, shortcode, javascript, extended class, css, iPhone, iPod, iPad, gallery, child theme
 Requires at least: 3.0
-Tested up to: 3.1
-Stable tag: 0.9.7
+Tested up to: 3.3
+Stable tag: 0.9.8
 License: GPLv2
 
 xili-floom-slideshow integrates the floom slideshow in WordPress theme or child theme.
@@ -17,16 +17,20 @@ Floom slideshow designed by [Oskar Krawczyk](http://nouincolor.com/) under MIT l
 = How it works ? =
 **xili-floom-slideshow** inserts the javascript and css file inside the header of the theme. The images attached (but not inserted) to a post (or a page) are listed for the slideshow. And after adding a `[xilifloom]` shortcode inside the content of the post, the slideshow of the images of the gallery are automatically displayed.
 With the dashboard Settings page, it is possible to change some properties of the slideshow without changing the original javascript: *by example, number of vertical 'venitian' blinds, speed, progress bar, visible captions, and [more](http://blog.olicio.us/2009/07/25/floom/).*
-Some properties can be attached to one post by using custom fields.
+Some properties can be attached to one post by using custom fields and to one shortcode by using params.
 
+= new 0.9.8 =
+* enable now to have more than one slideshow displayed one resulting webpage. **Need a minimum of knowledges** in WP (shortcode), CSS, JS to activate these "flooms" and avoid bad side effects when more than one slideshow.
+* BE AWARE : now xili-floom-slideshow needs that theme have both `wp_head()` (as before)  **AND**  `wp_foot()` template tags in header and footer as in default theme like twentyten or twentyeleven or the most current well designed.
+* Improved filter `xili_floom_get_values` has now 2 params : developers must read source.
+* multiple flooms example [here](http://2011.wpmu.xilione.com/xili-floom-slideshow-demo/ "xili-floom-slideshow demo") !
 
-= new 0.9.7 =
+= 0.9.7 =
 * OOP new source code
 * new *like* function because changes in WP 3.0 when naming file and slug of attachment images. Possible to choose post column (`post_name or guid or…`) to sub-select with `floom_subname` postmeta
 * developers using global `$xilifloom_name_selector` must change to function `set_xilifloom_name_selector()` - see code at end of source
 
 = 0.9.5 =
-
 * compatibility with child theme as visible in new theme of [dev.xiligroup.com](http://dev.xiligroup.com/) - child example of default twentyten -
 * add thumbnail bar with shortcode [xilifloombar]
 
@@ -38,12 +42,12 @@ Some properties can be attached to one post by using custom fields.
 
 * add for pictures order by menu_order. If order is set in gallery linked to a post, displayed series is ordered by these numbers ascendant.
 * more parameters.
-* add hooks and filters : to allow better selection of floom values and choice of series of images (not necessary attached to a post) according the theme or cms architecture, two filters was added : `xili_floom_get_values` and `xili_floom_get_images` insertable in functions inside `functions.php` of the current theme. Very useful to personalize header according place inside the site architecture. [example](http://dev.xiligroup.com/?cat=480&lang=en_us) 
+* add hooks and filters : to allow better selection of floom values and choice of series of images (not necessary attached to a post) according the theme or cms architecture, two filters was added : `xili_floom_get_values` and `xili_floom_get_images` insertable in functions inside `functions.php` of the current theme. Very useful to personalize header according place inside the site architecture. [example](http://dev.xiligroup.com/?cat=529&lang=en_us) 
 
 = prerequisite =
 
 * Minimun knowledges in Wordpress architecture (and css).
-* If others plugins use mootools, some modifications must be done through a added function named `xilifloom_theme_header()` inside functions.php. 
+* If others plugins use mootools framework, some modifications must be done through a added function named `xilifloom_theme_header()` inside functions.php - see source. 
 * Images for a slideshow must be selected with great precaution. (Same size adapted to the frame)
 
 
@@ -69,6 +73,12 @@ The following custom fields (prefix floom_) work like javascript parameters. Use
 
 It is also possible to fireEvent (onSlideChange and onPreload) by choosing name of fired functions (javascript added by functions in current theme).
 
+**Example of parameters in shortcode:**
+
+`[xilifloom frame_id="mondrian-top-left" blinds_id="mblinds" captions="false" children="211" amount="20" ]`
+
+multiple flooms example [here](http://2011.wpmu.xilione.com/xili-floom-slideshow-demo/ "xili-floom-slideshow demo") !
+
 **Gold parameters**
 If active in plugin settings, a wide range of features are open for special js effects on first or last slide and on other events of the child class... [see this post](http://dev.xiligroup.com/?p=1357)
 
@@ -83,6 +93,13 @@ As in this website [dev.xiligroup.com](http://dev.xiligroup.com/), it is now pos
 
 Yes, xili-floom-slideshow only need to find the id of the div where images are displayed (default name **blinds**).
 
+= With latest version 0.9.8 and possibility to have more than one floom in resulting webpage, what about the settings ? =
+* In preliminary, it is very important to understand how xili-floom-slideshow works to avoid bad side effects. The insertion of specific js (domready) is done when `wp_footer()` is called so after counting the floom shortcode.
+For the settings, if not in shortcode, try to find in postmeta of displayed post and finally keep those in plugin's setting. 
+
+* Another important thing is to prepare the style.css of the theme or the floom.css  in subfolder floom/css inserted in the theme. (don't modify the css in plugin, use it as example.
+
+
 = What happen when iPhone or iPod visit the website ?
 As you know, flash is not compatible with iPhone, but javascript and Floom is !
 If xilitheme-select plugin is activated, the theme for iPhone is selected and the floom.css inside this theme is choosen. [see snapshot](http://wordpress.org/extend/plugins/xili-floom-slideshow/screenshots/).
@@ -91,10 +108,17 @@ If xilitheme-select plugin is activated, the theme for iPhone is selected and th
 
 Yes, but be aware to add a special function in your functions.php. See example [here](http://dev.xiligroup.com/xili-floom-slideshow/).
 
-= Is is possible to display progressive texts ?
+= Is is possible to display progressive texts ? =
 
 Yes, by creating a line by line image series like [here](http://www.presse-infosplus.fr/).
 
+= Is is possible to display more than one floom in a webpage or a singular post ? =
+
+Yes, but don't forget that the theme css must contains all div styles for each slideshow (with unique id).
+
+= What happens with default divs (frame and blinds) when more than one ?
+
+xili-floom-slideshow plugin creates unique ids based on the default one : blinds-cont, blinds-cont-2,… and blinds, blinds-2,… (to be also compatible with previous versions).
 
 = Support Forum or contact form ? =
 
@@ -109,6 +133,9 @@ Effectively, prefer [forum](http://forum2.dev.xiligroup.com/) to have support (w
 5. Ordered list of images (only these in slideshow are affected).
 
 == Changelog ==
+
+= 0.9.8 =
+* now possible to have more than on floom (via shortcode) on a webpage. Improved and more params in shortcode `[xilifloom]`.
 
 = 0.9.6, 0.9.7 = 
 * OOP source code
@@ -142,7 +169,7 @@ Effectively, prefer [forum](http://forum2.dev.xiligroup.com/) to have support (w
 
 * first public release
 
-© 2011-06-02 MS dev.xiligroup.com
+© 2011-12-07 MS dev.xiligroup.com
 
 == Upgrade Notice ==
 
