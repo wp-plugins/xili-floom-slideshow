@@ -4,7 +4,7 @@ Donate link: http://dev.xiligroup.com/xili-floom-slideshow/
 Tags: theme, floom, Post, plugin, posts, mootools, slideshow, shortcode, javascript, extended class, css, iPhone, iPod, iPad, gallery, child theme
 Requires at least: 3.0
 Tested up to: 3.3
-Stable tag: 0.9.8
+Stable tag: 0.9.9
 License: GPLv2
 
 xili-floom-slideshow integrates the floom slideshow in WordPress theme or child theme.
@@ -19,7 +19,7 @@ Floom slideshow designed by [Oskar Krawczyk](http://nouincolor.com/) under MIT l
 With the dashboard Settings page, it is possible to change some properties of the slideshow without changing the original javascript: *by example, number of vertical 'venitian' blinds, speed, progress bar, visible captions, and [more](http://blog.olicio.us/2009/07/25/floom/).*
 Some properties can be attached to one post by using custom fields and to one shortcode by using params.
 
-= new 0.9.8 =
+= new 0.9.8 - 0.9.9 =
 * enable now to have more than one slideshow displayed one resulting webpage. **Need a minimum of knowledges** in WP (shortcode), CSS, JS to activate these "flooms" and avoid bad side effects when more than one slideshow.
 * BE AWARE : now xili-floom-slideshow needs that theme have both `wp_head()` (as before)  **AND**  `wp_foot()` template tags in header and footer as in default theme like twentyten or twentyeleven or the most current well designed.
 * Improved filter `xili_floom_get_values` has now 2 params : developers must read source.
@@ -134,7 +134,7 @@ Effectively, prefer [forum](http://forum2.dev.xiligroup.com/) to have support (w
 
 == Changelog ==
 
-= 0.9.8 =
+= 0.9.8, 0.9.9 =
 * now possible to have more than on floom (via shortcode) on a webpage. Improved and more params in shortcode `[xilifloom]`.
 
 = 0.9.6, 0.9.7 = 
@@ -169,7 +169,7 @@ Effectively, prefer [forum](http://forum2.dev.xiligroup.com/) to have support (w
 
 * first public release
 
-© 2011-12-07 MS dev.xiligroup.com
+© 2011-12-08 MS dev.xiligroup.com
 
 == Upgrade Notice ==
 
