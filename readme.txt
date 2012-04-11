@@ -3,8 +3,8 @@ Contributors: michelwppi, MS xiligroup
 Donate link: http://dev.xiligroup.com/xili-floom-slideshow/
 Tags: theme, floom, Post, plugin, posts, mootools, slideshow, shortcode, javascript, extended class, css, iPhone, iPod, iPad, gallery, child theme
 Requires at least: 3.0
-Tested up to: 3.3
-Stable tag: 0.9.9
+Tested up to: 3.4
+Stable tag: 1.0
 License: GPLv2
 
 xili-floom-slideshow integrates the floom slideshow in WordPress theme or child theme.
@@ -19,27 +19,19 @@ Floom slideshow designed by [Oskar Krawczyk](http://nouincolor.com/) under MIT l
 With the dashboard Settings page, it is possible to change some properties of the slideshow without changing the original javascript: *by example, number of vertical 'venitian' blinds, speed, progress bar, visible captions, and [more](http://blog.olicio.us/2009/07/25/floom/).*
 Some properties can be attached to one post by using custom fields and to one shortcode by using params.
 
-= new 0.9.8 - 0.9.9 =
+= new from 0.9.x to 1.0 =
+* New [xili wiki](http://wiki.xiligroup.org)
 * enable now to have more than one slideshow displayed one resulting webpage. **Need a minimum of knowledges** in WP (shortcode), CSS, JS to activate these "flooms" and avoid bad side effects when more than one slideshow.
 * BE AWARE : now xili-floom-slideshow needs that theme have both `wp_head()` (as before)  **AND**  `wp_foot()` template tags in header and footer as in default theme like twentyten or twentyeleven or the most current well designed.
 * Improved filter `xili_floom_get_values` has now 2 params : developers must read source.
 * multiple flooms example [here](http://2011.wpmu.xilione.com/xili-floom-slideshow-demo/ "xili-floom-slideshow demo") !
-
-= 0.9.7 =
 * OOP new source code
 * new *like* function because changes in WP 3.0 when naming file and slug of attachment images. Possible to choose post column (`post_name or guid or…`) to sub-select with `floom_subname` postmeta
 * developers using global `$xilifloom_name_selector` must change to function `set_xilifloom_name_selector()` - see code at end of source
-
-= 0.9.5 =
 * compatibility with child theme as visible in new theme of [dev.xiligroup.com](http://dev.xiligroup.com/) - child example of default twentyten -
 * add thumbnail bar with shortcode [xilifloombar]
-
-= 0.9.3 =
 * Gold parameters added : ready to integrate a new child class of Floom [see this post](http://dev.xiligroup.com/?p=1357). Open to better events exchanged with theme UI. More modularity and possibility of setting. (*Gold options are reserved for theme designer and webmaster with sufficient knowledge in php, js,...*)
 * CAUTION: after upgrading, if `floom_subname` is used in custom fields of some posts, to retrieve the images series, the wildcard must be wrapped with one or two chars '%' as in **LIKE** of sql query.
-
-= 0.9.2 =
-
 * add for pictures order by menu_order. If order is set in gallery linked to a post, displayed series is ordered by these numbers ascendant.
 * more parameters.
 * add hooks and filters : to allow better selection of floom values and choice of series of images (not necessary attached to a post) according the theme or cms architecture, two filters was added : `xili_floom_get_values` and `xili_floom_get_images` insertable in functions inside `functions.php` of the current theme. Very useful to personalize header according place inside the site architecture. [example](http://dev.xiligroup.com/?cat=529&lang=en_us) 
@@ -169,7 +161,7 @@ Effectively, prefer [forum](http://forum2.dev.xiligroup.com/) to have support (w
 
 * first public release
 
-© 2011-12-08 MS dev.xiligroup.com
+© 2012-04-11 MS dev.xiligroup.com
 
 == Upgrade Notice ==
 
