@@ -3,8 +3,8 @@ Contributors: michelwppi, MS xiligroup
 Donate link: http://dev.xiligroup.com/xili-floom-slideshow/
 Tags: theme, floom, Post, plugin, posts, mootools, slideshow, shortcode, javascript, extended class, css, iPhone, iPod, iPad, gallery, child theme, post-thumbnails
 Requires at least: 3.0
-Tested up to: 3.4
-Stable tag: 1.1
+Tested up to: 3.5.1
+Stable tag: 1.2
 License: GPLv2
 
 xili-floom-slideshow integrates the floom slideshow in WordPress theme or child theme.
@@ -19,8 +19,9 @@ Floom slideshow designed by [Oskar Krawczyk](http://nouincolor.com/) under MIT l
 With the dashboard Settings page, it is possible to change some properties of the slideshow without changing the original javascript: *by example, number of vertical 'venitian' blinds, speed, progress bar, visible captions, and [more](http://blog.olicio.us/2009/07/25/floom/).*
 Some properties can be attached to one post by using custom fields and to one shortcode by using params.
 
-
-= new 1.1 (2012-07-22) =
+= new 1.2 (2013-05-24) =
+* caution message in js if images unavailable, __construct - tests 3.5.1 & 3.6
+= 1.1 (2012-07-22) =
 
 * by default display full size of attached images. But can also display other sizes as define by default (large, medium, thumbnail) or  those set with `add_image_size( 'my-size-example', 600, 210 );` function. Use 'floom_image_size' in custom post field or 'image_size' param in Shortcode.
 * example of shortcode `[xilifloom image_size="my-size-example"]`. Be aware that current css is adapted !
@@ -136,8 +137,10 @@ Effectively, prefer [forum](http://forum2.dev.xiligroup.com/) to have support (w
 
 == Changelog ==
 
-= 1.1 =
-* 120722 - setting to choose images size (default full or as (large, medium, thumbnail) and those defined by add_image_size(); )
+= 1.2 =
+* fixes and notice for 3.5.1
+= 1.1 (2012-07-22) =
+* setting to choose images size (default full or as (large, medium, thumbnail) and those defined by add_image_size(); )
 = 0.9.8, 0.9.9 =
 * now possible to have more than on floom (via shortcode) on a webpage. Improved and more params in shortcode `[xilifloom]`.
 
@@ -173,7 +176,7 @@ Effectively, prefer [forum](http://forum2.dev.xiligroup.com/) to have support (w
 
 * first public release
 
-© 2012-04-11 MS dev.xiligroup.com
+© 2013-05-25 MS dev.xiligroup.com
 
 == Upgrade Notice ==
 
