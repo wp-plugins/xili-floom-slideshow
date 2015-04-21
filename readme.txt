@@ -3,7 +3,7 @@ Contributors: michelwppi, MS xiligroup
 Donate link: http://dev.xiligroup.com/xili-floom-slideshow/
 Tags: theme, floom, Post, plugin, posts, mootools, slideshow, shortcode, javascript, extended class, css, iPhone, iPod, iPad, gallery, child theme, post-thumbnails
 Requires at least: 3.0
-Tested up to: 3.9
+Tested up to: 4.1.1
 Stable tag: 1.3
 License: GPLv2
 
